@@ -14,13 +14,23 @@
 		D284E40719050E1800C30943 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E40619050E1800C30943 /* main.m */; };
 		D284E40B19050E1800C30943 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E40A19050E1800C30943 /* AppDelegate.m */; };
 		D284E40E19050E1800C30943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D284E40C19050E1800C30943 /* Main.storyboard */; };
-		D284E41119050E1800C30943 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E41019050E1800C30943 /* ViewController.m */; };
+		D284E41119050E1800C30943 /* CATextLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E41019050E1800C30943 /* CATextLayerViewController.m */; };
 		D284E41319050E1800C30943 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D284E41219050E1800C30943 /* Images.xcassets */; };
 		D284E41A19050E1800C30943 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284E41919050E1800C30943 /* XCTest.framework */; };
 		D284E41B19050E1800C30943 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284E3FA19050E1800C30943 /* Foundation.framework */; };
 		D284E41C19050E1800C30943 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284E3FE19050E1800C30943 /* UIKit.framework */; };
 		D284E42419050E1800C30943 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D284E42219050E1800C30943 /* InfoPlist.strings */; };
 		D284E42619050E1800C30943 /* CALayerSubclassTourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E42519050E1800C30943 /* CALayerSubclassTourTests.m */; };
+		D284E4311905108000C30943 /* SubclassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E4301905108000C30943 /* SubclassesViewController.m */; };
+		D284E433190526F100C30943 /* CAShapeLayerViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = D284E432190526F100C30943 /* CAShapeLayerViewController.h */; };
+		D284E4351905271300C30943 /* CAShapeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E4341905271300C30943 /* CAShapeLayerViewController.m */; };
+		D284E4381905285800C30943 /* CAScrollLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E4371905285800C30943 /* CAScrollLayerViewController.m */; };
+		D284E43B190528CF00C30943 /* CATiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E43A190528CF00C30943 /* CATiledLayerViewController.m */; };
+		D284E43E1905291700C30943 /* CAGradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E43D1905291700C30943 /* CAGradientLayerViewController.m */; };
+		D284E4411905297D00C30943 /* CAReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E4401905297D00C30943 /* CAReplicatorLayerViewController.m */; };
+		D284E444190529AD00C30943 /* CATransformLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E443190529AD00C30943 /* CATransformLayerViewController.m */; };
+		D284E447190529D600C30943 /* CAEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E446190529D600C30943 /* CAEmitterLayerViewController.m */; };
+		D284E44A19052A0500C30943 /* CAEAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E44919052A0500C30943 /* CAEAGLLayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +55,32 @@
 		D284E40919050E1800C30943 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D284E40A19050E1800C30943 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D284E40D19050E1800C30943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D284E40F19050E1800C30943 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D284E41019050E1800C30943 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D284E40F19050E1800C30943 /* CATextLayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATextLayerViewController.h; sourceTree = "<group>"; };
+		D284E41019050E1800C30943 /* CATextLayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATextLayerViewController.m; sourceTree = "<group>"; };
 		D284E41219050E1800C30943 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D284E41819050E1800C30943 /* CALayerSubclassTourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CALayerSubclassTourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D284E41919050E1800C30943 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D284E42119050E1800C30943 /* CALayerSubclassTourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CALayerSubclassTourTests-Info.plist"; sourceTree = "<group>"; };
 		D284E42319050E1800C30943 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D284E42519050E1800C30943 /* CALayerSubclassTourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALayerSubclassTourTests.m; sourceTree = "<group>"; };
+		D284E42F1905108000C30943 /* SubclassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassesViewController.h; sourceTree = "<group>"; };
+		D284E4301905108000C30943 /* SubclassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassesViewController.m; sourceTree = "<group>"; };
+		D284E432190526F100C30943 /* CAShapeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerViewController.h; sourceTree = "<group>"; };
+		D284E4341905271300C30943 /* CAShapeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerViewController.m; sourceTree = "<group>"; };
+		D284E4361905284600C30943 /* CAScrollLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScrollLayerViewController.h; sourceTree = "<group>"; };
+		D284E4371905285800C30943 /* CAScrollLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAScrollLayerViewController.m; sourceTree = "<group>"; };
+		D284E439190528B000C30943 /* CATiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATiledLayerViewController.h; sourceTree = "<group>"; };
+		D284E43A190528CF00C30943 /* CATiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATiledLayerViewController.m; sourceTree = "<group>"; };
+		D284E43C1905290300C30943 /* CAGradientLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGradientLayerViewController.h; sourceTree = "<group>"; };
+		D284E43D1905291700C30943 /* CAGradientLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGradientLayerViewController.m; sourceTree = "<group>"; };
+		D284E43F1905297500C30943 /* CAReplicatorLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAReplicatorLayerViewController.h; sourceTree = "<group>"; };
+		D284E4401905297D00C30943 /* CAReplicatorLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAReplicatorLayerViewController.m; sourceTree = "<group>"; };
+		D284E442190529A800C30943 /* CATransformLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransformLayerViewController.h; sourceTree = "<group>"; };
+		D284E443190529AD00C30943 /* CATransformLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransformLayerViewController.m; sourceTree = "<group>"; };
+		D284E445190529D100C30943 /* CAEmitterLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEmitterLayerViewController.h; sourceTree = "<group>"; };
+		D284E446190529D600C30943 /* CAEmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerViewController.m; sourceTree = "<group>"; };
+		D284E448190529FD00C30943 /* CAEAGLLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEAGLLayerViewController.h; sourceTree = "<group>"; };
+		D284E44919052A0500C30943 /* CAEAGLLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEAGLLayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +142,28 @@
 			children = (
 				D284E40919050E1800C30943 /* AppDelegate.h */,
 				D284E40A19050E1800C30943 /* AppDelegate.m */,
-				D284E40C19050E1800C30943 /* Main.storyboard */,
-				D284E40F19050E1800C30943 /* ViewController.h */,
-				D284E41019050E1800C30943 /* ViewController.m */,
+				D284E448190529FD00C30943 /* CAEAGLLayerViewController.h */,
+				D284E44919052A0500C30943 /* CAEAGLLayerViewController.m */,
+				D284E445190529D100C30943 /* CAEmitterLayerViewController.h */,
+				D284E446190529D600C30943 /* CAEmitterLayerViewController.m */,
+				D284E43C1905290300C30943 /* CAGradientLayerViewController.h */,
+				D284E43D1905291700C30943 /* CAGradientLayerViewController.m */,
+				D284E43F1905297500C30943 /* CAReplicatorLayerViewController.h */,
+				D284E4401905297D00C30943 /* CAReplicatorLayerViewController.m */,
+				D284E4361905284600C30943 /* CAScrollLayerViewController.h */,
+				D284E4371905285800C30943 /* CAScrollLayerViewController.m */,
+				D284E432190526F100C30943 /* CAShapeLayerViewController.h */,
+				D284E4341905271300C30943 /* CAShapeLayerViewController.m */,
+				D284E40F19050E1800C30943 /* CATextLayerViewController.h */,
+				D284E41019050E1800C30943 /* CATextLayerViewController.m */,
+				D284E439190528B000C30943 /* CATiledLayerViewController.h */,
+				D284E43A190528CF00C30943 /* CATiledLayerViewController.m */,
+				D284E442190529A800C30943 /* CATransformLayerViewController.h */,
+				D284E443190529AD00C30943 /* CATransformLayerViewController.m */,
 				D284E41219050E1800C30943 /* Images.xcassets */,
+				D284E40C19050E1800C30943 /* Main.storyboard */,
+				D284E42F1905108000C30943 /* SubclassesViewController.h */,
+				D284E4301905108000C30943 /* SubclassesViewController.m */,
 				D284E40119050E1800C30943 /* Supporting Files */,
 			);
 			path = CALayerSubclassTour;
@@ -231,6 +277,7 @@
 				D284E41319050E1800C30943 /* Images.xcassets in Resources */,
 				D284E40519050E1800C30943 /* InfoPlist.strings in Resources */,
 				D284E40E19050E1800C30943 /* Main.storyboard in Resources */,
+				D284E433190526F100C30943 /* CAShapeLayerViewController.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +296,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D284E41119050E1800C30943 /* ViewController.m in Sources */,
+				D284E43E1905291700C30943 /* CAGradientLayerViewController.m in Sources */,
+				D284E4351905271300C30943 /* CAShapeLayerViewController.m in Sources */,
+				D284E43B190528CF00C30943 /* CATiledLayerViewController.m in Sources */,
+				D284E44A19052A0500C30943 /* CAEAGLLayerViewController.m in Sources */,
+				D284E4311905108000C30943 /* SubclassesViewController.m in Sources */,
+				D284E41119050E1800C30943 /* CATextLayerViewController.m in Sources */,
+				D284E4381905285800C30943 /* CAScrollLayerViewController.m in Sources */,
+				D284E447190529D600C30943 /* CAEmitterLayerViewController.m in Sources */,
 				D284E40B19050E1800C30943 /* AppDelegate.m in Sources */,
 				D284E40719050E1800C30943 /* main.m in Sources */,
+				D284E444190529AD00C30943 /* CATransformLayerViewController.m in Sources */,
+				D284E4411905297D00C30943 /* CAReplicatorLayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

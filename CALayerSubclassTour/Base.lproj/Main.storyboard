@@ -1,13 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7hv-HL-MIT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Subclasses View Controller-->
+        <scene sceneID="YiT-am-dsF">
+            <objects>
+                <tableViewController id="VeA-4L-uqI" customClass="SubclassesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="mYP-R4-Rkx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="NuC-qQ-TSD" detailTextLabel="7Mk-Lw-6g5" style="IBUITableViewCellStyleSubtitle" id="ayA-Kn-Gao">
+                                <rect key="frame" x="0.0" y="86" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ayA-Kn-Gao" id="F3o-2V-jmw">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NuC-qQ-TSD">
+                                            <rect key="frame" x="15" y="13" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Mk-Lw-6g5">
+                                            <rect key="frame" x="15" y="35" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VeA-4L-uqI" id="E23-iO-uqi"/>
+                            <outlet property="delegate" destination="VeA-4L-uqI" id="vP9-RM-8gz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5sO-GE-W7q">
+                        <barButtonItem key="backBarButtonItem" title=" " id="2Xi-if-hzq"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="CATextLayer" id="wdx-yM-B9Q"/>
+                        <segue destination="d6u-yC-xUm" kind="push" identifier="CAShapeLayer" id="wrb-0j-4f6"/>
+                        <segue destination="LEu-4P-RjW" kind="push" identifier="CAScrollLayer" id="Rkx-R8-YCg"/>
+                        <segue destination="U94-NG-5lQ" kind="push" identifier="CATiledLayer" id="VJ6-vE-vsw"/>
+                        <segue destination="1Xq-gb-6KS" kind="push" identifier="CAGradientLayer" id="XQQ-66-2mb"/>
+                        <segue destination="LBd-Q4-VTC" kind="push" identifier="CAReplicatorLayer" id="zwr-2W-7iY"/>
+                        <segue destination="HxT-QF-IKz" kind="push" identifier="CATransformLayer" id="LD7-Yf-GEQ"/>
+                        <segue destination="anX-eH-sFo" kind="push" identifier="CAEmitterLayer" id="4S2-Ir-G1A"/>
+                        <segue destination="sxf-DZ-NNc" kind="push" identifier="CAEAGLLayer" id="yTb-mD-vQe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhC-Fh-kmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="1402"/>
+        </scene>
+        <!--Text Layer View Controller - CATextLayer-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="CATextLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,9 +75,181 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="CATextLayer" id="T77-Fl-hjZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="194" y="600"/>
+        </scene>
+        <!--Shape Layer View Controller - CAShapeLayer-->
+        <scene sceneID="Ea1-oV-PNg">
+            <objects>
+                <viewController id="d6u-yC-xUm" customClass="CAShapeLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="069-Ds-LCe"/>
+                        <viewControllerLayoutGuide type="bottom" id="kmW-eP-bSj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a5I-78-cah">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAShapeLayer" id="ogt-rj-2km"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yQ-5y-me0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="600"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GCv-DJ-Jfu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hv-HL-MIT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MKy-JC-fX9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VeA-4L-uqI" kind="relationship" relationship="rootViewController" id="Id2-YW-XUo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioq-mb-vr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="1402"/>
+        </scene>
+        <!--Layer View Controller - CAEAGLLayer-->
+        <scene sceneID="HxO-hk-w9T">
+            <objects>
+                <viewController id="sxf-DZ-NNc" customClass="CAEAGLLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v4r-XV-Qq8"/>
+                        <viewControllerLayoutGuide type="bottom" id="9yg-l9-8Zn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DxX-yM-8ep">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAEAGLLayer" id="xJD-3z-jp8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiV-el-wx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="2204"/>
+        </scene>
+        <!--Scroll Layer View Controller - CAScrollLayer-->
+        <scene sceneID="zOH-D7-meM">
+            <objects>
+                <viewController id="LEu-4P-RjW" customClass="CAScrollLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bww-B3-EZt"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzG-6g-hyP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5LR-JQ-OS3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAScrollLayer" id="rno-qz-7fG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2X-A5-H4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="600"/>
+        </scene>
+        <!--Emitter Layer View Controller - CAEmitterLayer-->
+        <scene sceneID="on7-Oq-k9D">
+            <objects>
+                <viewController id="anX-eH-sFo" customClass="CAEmitterLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xlv-Jc-w8z"/>
+                        <viewControllerLayoutGuide type="bottom" id="FvD-NF-F5e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iyq-HU-rhX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAEmitterLayer" id="EH2-hu-STp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMv-WH-bjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="2204"/>
+        </scene>
+        <!--Transform Layer View Controller - CATransformLayer-->
+        <scene sceneID="XIM-hd-Gqv">
+            <objects>
+                <viewController id="HxT-QF-IKz" customClass="CATransformLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k58-au-tYe"/>
+                        <viewControllerLayoutGuide type="bottom" id="oyq-yk-D8A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="inw-44-t83">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CATransformLayer" id="Arb-tw-V1q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDM-zZ-NX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="2204"/>
+        </scene>
+        <!--Gradient Layer View Controller - CAGradientLayer-->
+        <scene sceneID="izN-sk-QXZ">
+            <objects>
+                <viewController id="1Xq-gb-6KS" customClass="CAGradientLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hpa-Pp-gyo"/>
+                        <viewControllerLayoutGuide type="bottom" id="715-9D-3J5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rrs-7i-23J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAGradientLayer" id="qj6-Qg-vMG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zDS-Vr-gz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="1402"/>
+        </scene>
+        <!--Tiled Layer View Controller - CATiledLayer-->
+        <scene sceneID="nGj-2M-P1B">
+            <objects>
+                <viewController id="U94-NG-5lQ" customClass="CATiledLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mEV-Hf-4M8"/>
+                        <viewControllerLayoutGuide type="bottom" id="79g-SG-AvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1e9-cj-NRG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CATiledLayer" id="yAw-Cw-Bhr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHX-hF-JoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="600"/>
+        </scene>
+        <!--Replicator Layer View Controller - CAReplicatorLayer-->
+        <scene sceneID="VOh-b5-yHY">
+            <objects>
+                <viewController id="LBd-Q4-VTC" customClass="CAReplicatorLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tiO-t5-qVh"/>
+                        <viewControllerLayoutGuide type="bottom" id="tb2-Aw-tUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vog-du-zj0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAReplicatorLayer" id="1h6-dj-IBy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hs8-d0-nKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="2204"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

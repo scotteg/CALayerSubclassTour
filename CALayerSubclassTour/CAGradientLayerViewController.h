@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CAGradientLayerViewController.h
 //  CALayerSubclassTour
 //
 //  Created by Scott Gardner on 4/21/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CAGradientLayerViewController : UIViewController
 
 @end
