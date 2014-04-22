@@ -512,6 +512,7 @@
 				D284E42B19050E1800C30943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D284E42C19050E1800C30943 /* Build configuration list for PBXNativeTarget "CALayerSubclassTourTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +521,7 @@
 				D284E42E19050E1800C30943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

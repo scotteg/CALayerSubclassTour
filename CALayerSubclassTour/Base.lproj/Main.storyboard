@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7hv-HL-MIT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7hv-HL-MIT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Subclasses View Controller-->
+        <!--Subclasses View Controller - CALayer Subclasses-->
         <scene sceneID="YiT-am-dsF">
             <objects>
                 <tableViewController id="VeA-4L-uqI" customClass="SubclassesViewController" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                             <outlet property="delegate" destination="VeA-4L-uqI" id="vP9-RM-8gz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5sO-GE-W7q">
+                    <navigationItem key="navigationItem" title="CALayer Subclasses" id="5sO-GE-W7q">
                         <barButtonItem key="backBarButtonItem" title=" " id="2Xi-if-hzq"/>
                     </navigationItem>
                     <connections>
@@ -67,15 +67,94 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CATextLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="bYp-nB-bJs"/>
+                        <viewControllerLayoutGuide type="bottom" id="r6R-kA-Omh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="tDf-iA-PrG">
+                                <rect key="frame" x="62" y="446" width="110" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fontSizeSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="arC-T4-t7t"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9V-Gb-ODg">
+                                <rect key="frame" x="10" y="75" width="300" height="362"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNJ-Y1-dsN">
+                                <rect key="frame" x="10" y="450" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSx-mY-vaS">
+                                <rect key="frame" x="261" y="445" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wrapTextSwitchChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="U14-Wd-MrX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrap text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcD-dH-Uuo">
+                                <rect key="frame" x="178" y="450" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="EoO-d6-JTM">
+                                <rect key="frame" x="147" y="520" width="163" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Start"/>
+                                    <segment title="Middle"/>
+                                    <segment title="End"/>
+                                </segments>
+                                <connections>
+                                    <action selector="truncationModeSegmentedControlChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="5Vf-VU-BJ9"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Truncation mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjV-Dy-Wug">
+                                <rect key="frame" x="10" y="523" width="129" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-Lq-TSa">
+                                <rect key="frame" x="147" y="484" width="163" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="align_left"/>
+                                    <segment title="" image="align_center"/>
+                                    <segment title="" image="align_just"/>
+                                    <segment title="" image="align_right"/>
+                                </segments>
+                                <connections>
+                                    <action selector="alignmentModeSegmentedControlChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="R4m-Fh-8hx"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alignment mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-yz-080">
+                                <rect key="frame" x="10" y="487" width="129" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="CATextLayer" id="T77-Fl-hjZ"/>
+                    <connections>
+                        <outlet property="alignmentModeSegmentedControl" destination="gZ3-Lq-TSa" id="Ph5-xq-R9v"/>
+                        <outlet property="fontSizeSlider" destination="tDf-iA-PrG" id="YJ2-Kq-nOZ"/>
+                        <outlet property="fontSizeSliderValueLabel" destination="tNJ-Y1-dsN" id="yy6-ER-jo6"/>
+                        <outlet property="truncationModeSegmentedControl" destination="EoO-d6-JTM" id="tsC-cc-8Vd"/>
+                        <outlet property="viewForTextLayer" destination="Z9V-Gb-ODg" id="DBm-Di-EMK"/>
+                        <outlet property="wrapTextSwitch" destination="bSx-mY-vaS" id="gCR-6f-ZLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,8 +165,8 @@
             <objects>
                 <viewController id="d6u-yC-xUm" customClass="CAShapeLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="069-Ds-LCe"/>
-                        <viewControllerLayoutGuide type="bottom" id="kmW-eP-bSj"/>
+                        <viewControllerLayoutGuide type="top" id="6DP-FW-5ly"/>
+                        <viewControllerLayoutGuide type="bottom" id="LrV-WI-PDq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a5I-78-cah">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -123,8 +202,8 @@
             <objects>
                 <viewController id="sxf-DZ-NNc" customClass="CAEAGLLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="v4r-XV-Qq8"/>
-                        <viewControllerLayoutGuide type="bottom" id="9yg-l9-8Zn"/>
+                        <viewControllerLayoutGuide type="top" id="wS2-zP-CgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="n7F-o8-hKI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DxX-yM-8ep">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -142,8 +221,8 @@
             <objects>
                 <viewController id="LEu-4P-RjW" customClass="CAScrollLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bww-B3-EZt"/>
-                        <viewControllerLayoutGuide type="bottom" id="dzG-6g-hyP"/>
+                        <viewControllerLayoutGuide type="top" id="pP7-9P-YYt"/>
+                        <viewControllerLayoutGuide type="bottom" id="nmQ-bB-2fK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5LR-JQ-OS3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -161,8 +240,8 @@
             <objects>
                 <viewController id="anX-eH-sFo" customClass="CAEmitterLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xlv-Jc-w8z"/>
-                        <viewControllerLayoutGuide type="bottom" id="FvD-NF-F5e"/>
+                        <viewControllerLayoutGuide type="top" id="x2w-Wt-6yV"/>
+                        <viewControllerLayoutGuide type="bottom" id="2RP-fx-mYA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iyq-HU-rhX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -180,8 +259,8 @@
             <objects>
                 <viewController id="HxT-QF-IKz" customClass="CATransformLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k58-au-tYe"/>
-                        <viewControllerLayoutGuide type="bottom" id="oyq-yk-D8A"/>
+                        <viewControllerLayoutGuide type="top" id="vPM-cs-sME"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqJ-l2-n91"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="inw-44-t83">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -199,8 +278,8 @@
             <objects>
                 <viewController id="1Xq-gb-6KS" customClass="CAGradientLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hpa-Pp-gyo"/>
-                        <viewControllerLayoutGuide type="bottom" id="715-9D-3J5"/>
+                        <viewControllerLayoutGuide type="top" id="YcX-PI-1xl"/>
+                        <viewControllerLayoutGuide type="bottom" id="n8P-nQ-RdQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rrs-7i-23J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -218,8 +297,8 @@
             <objects>
                 <viewController id="U94-NG-5lQ" customClass="CATiledLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mEV-Hf-4M8"/>
-                        <viewControllerLayoutGuide type="bottom" id="79g-SG-AvE"/>
+                        <viewControllerLayoutGuide type="top" id="C32-S0-3Tt"/>
+                        <viewControllerLayoutGuide type="bottom" id="w55-F4-Grl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-cj-NRG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -237,8 +316,8 @@
             <objects>
                 <viewController id="LBd-Q4-VTC" customClass="CAReplicatorLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tiO-t5-qVh"/>
-                        <viewControllerLayoutGuide type="bottom" id="tb2-Aw-tUE"/>
+                        <viewControllerLayoutGuide type="top" id="e3v-vP-6O0"/>
+                        <viewControllerLayoutGuide type="bottom" id="PqV-uB-y7p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vog-du-zj0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -252,6 +331,12 @@
             <point key="canvasLocation" x="1466" y="2204"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="align_center" width="24" height="24"/>
+        <image name="align_just" width="24" height="24"/>
+        <image name="align_left" width="24" height="24"/>
+        <image name="align_right" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
