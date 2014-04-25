@@ -14,14 +14,14 @@ static CGFloat const BaseFontSize = 24.0f;
 typedef enum : NSUInteger {
   TruncationModeStart,
   TruncationModeMiddle,
-  TruncationModeEnd,
+  TruncationModeEnd
 } TruncationMode;
 
 typedef enum : NSUInteger {
   AlignmentModeLeft,
   AlignmentModeCenter,
   AlignmentModeJustified,
-  AlignmentModeRight,
+  AlignmentModeRight
 } AlignmentMode;
 
 @interface CATextLayerViewController ()
@@ -68,7 +68,7 @@ typedef enum : NSUInteger {
   self.textLayer.fontSize = self.fontSize;
 }
 
-- (IBAction)fontSizeSliderValueChanged:(UISlider *)sender
+- (IBAction)fontSizeSliderChanged:(UISlider *)sender
 {
   self.fontSizeSliderValueLabel.text = [NSString stringWithFormat:@"%0.0f%%", self.fontSizeSlider.value * 100];
   self.fontSize = BaseFontSize * sender.value;

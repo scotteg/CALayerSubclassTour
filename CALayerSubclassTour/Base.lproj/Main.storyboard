@@ -75,10 +75,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="tDf-iA-PrG">
-                                <rect key="frame" x="62" y="446" width="110" height="31"/>
+                                <rect key="frame" x="62" y="446" width="100" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="fontSizeSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="arC-T4-t7t"/>
+                                    <action selector="fontSizeSliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fpT-6l-zJy"/>
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9V-Gb-ODg">
@@ -171,9 +171,146 @@
                     <view key="view" contentMode="scaleToFill" id="a5I-78-cah">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bv-Zz-0ao">
+                                <rect key="frame" x="35" y="99" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="359" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-Nd-ezG">
+                                <rect key="frame" x="206" y="373" width="106" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="hueSliderChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="LhL-JW-KsR"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-H5-rlo">
+                                <rect key="frame" x="168" y="377" width="32" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-6M-MUo">
+                                <rect key="frame" x="101" y="372" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="closePathSwitchChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="mLh-fw-rCR"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close path" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-iL-RpB">
+                                <rect key="frame" x="10" y="377" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-Nz-kyv">
+                                <rect key="frame" x="99" y="449" width="81" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="lineWidthSliderChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="MhV-j4-DoU"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="lQr-2C-2n4">
+                                <rect key="frame" x="164" y="411" width="147" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Non-zero"/>
+                                    <segment title="Even-odd"/>
+                                </segments>
+                                <connections>
+                                    <action selector="fillRuleSegmentedControlChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="XWl-s7-YEy"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill rule" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Us-Jm-45C">
+                                <rect key="frame" x="101" y="414" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mmr-qj-dgy">
+                                <rect key="frame" x="84" y="487" width="173" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Butt"/>
+                                    <segment title="Round"/>
+                                    <segment title="Square"/>
+                                </segments>
+                                <connections>
+                                    <action selector="lineCapSegmentedControlChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="xD5-TM-7Ud"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line width" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbD-jm-Zb1">
+                                <rect key="frame" x="10" y="453" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line cap" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-Xz-6RL">
+                                <rect key="frame" x="10" y="490" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FfO-gX-wOo">
+                                <rect key="frame" x="84" y="523" width="173" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Miter"/>
+                                    <segment title="Round"/>
+                                    <segment title="Bevel"/>
+                                </segments>
+                                <connections>
+                                    <action selector="lineJoinSegmentedControlChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="SBC-Gh-3Mm"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line join" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJS-uA-MM5">
+                                <rect key="frame" x="10" y="526" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7r-r5-wEa">
+                                <rect key="frame" x="194" y="453" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-wa-ish">
+                                <rect key="frame" x="261" y="448" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="lineDashSwitchChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="vuW-24-IGG"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OGQ-3q-gPY">
+                                <rect key="frame" x="40" y="409" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fillSwitchChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="ls3-la-8gE"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25X-oo-7at">
+                                <rect key="frame" x="10" y="414" width="22" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98773229122161865" green="1" blue="0.98739296197891235" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="CAShapeLayer" id="ogt-rj-2km"/>
+                    <connections>
+                        <outlet property="closePathSwitch" destination="Gdw-6M-MUo" id="jGn-5R-Ue9"/>
+                        <outlet property="fillRuleSegmentedControl" destination="lQr-2C-2n4" id="Rjc-U7-si9"/>
+                        <outlet property="fillSwitch" destination="OGQ-3q-gPY" id="3Mj-aw-VYp"/>
+                        <outlet property="hueSlider" destination="hLb-Nd-ezG" id="zgh-cx-QfX"/>
+                        <outlet property="lineCapSegmentedControl" destination="mmr-qj-dgy" id="rkl-KA-GWI"/>
+                        <outlet property="lineDashSwitch" destination="fvh-wa-ish" id="N3r-cj-zMZ"/>
+                        <outlet property="lineJoinSegmentedControl" destination="FfO-gX-wOo" id="jLl-Z7-cyR"/>
+                        <outlet property="lineWidthSlider" destination="HT1-Nz-kyv" id="xfc-rb-bGa"/>
+                        <outlet property="viewForShapeLayer" destination="1bv-Zz-0ao" id="TKS-Qi-kOf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yQ-5y-me0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
