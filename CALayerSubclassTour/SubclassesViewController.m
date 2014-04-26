@@ -18,11 +18,11 @@
 {
   [super viewDidLoad];
   self.subclasses = @[
-    @[@"CATextLayer", @"Render plain text or attributed strings"],
-    @[@"CAShapeLayer", @"Draw using scalable vector graphics"],
     @[@"CAScrollLayer", @"Display portion of a scrollable layer"],
     @[@"CATiledLayer", @"Split large content into tiles"],
+    @[@"CATextLayer", @"Render plain text or attributed strings"],
     @[@"CAGradientLayer", @"Apply a color gradient over background"],
+    @[@"CAShapeLayer", @"Draw using scalable vector graphics"],
     @[@"CAReplicatorLayer", @"Duplicate a source layer"],
     @[@"CATransformLayer", @"Create 3D structures"],
     @[@"CAEmitterLayer", @"Render animated particles"],

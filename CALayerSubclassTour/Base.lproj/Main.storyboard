@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="600"/>
+            <point key="canvasLocation" x="1042" y="600"/>
         </scene>
         <!--Shape Layer View Controller - CAShapeLayer-->
         <scene sceneID="Ea1-oV-PNg">
@@ -314,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yQ-5y-me0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="600"/>
+            <point key="canvasLocation" x="1466" y="1402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GCv-DJ-Jfu">
@@ -364,13 +364,59 @@
                     <view key="view" contentMode="scaleToFill" id="5LR-JQ-OS3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-8p-Lzy" customClass="ScrollingView">
+                                <rect key="frame" x="35" y="99" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03565_storkinayutthaya" translatesAutoresizingMaskIntoConstraints="NO" id="Q7T-KK-psb">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vertical scrolling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-kI-RWN">
+                                <rect key="frame" x="70" y="428" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horizontal scrolling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miO-18-3PF">
+                                <rect key="frame" x="48" y="389" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACy-Iw-vlN">
+                                <rect key="frame" x="203" y="423" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="scrollingSwitchChanged:" destination="LEu-4P-RjW" eventType="valueChanged" id="qVv-X2-Gk0"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-uq-d4b">
+                                <rect key="frame" x="203" y="384" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="scrollingSwitchChanged:" destination="LEu-4P-RjW" eventType="valueChanged" id="d0J-bE-zsq"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="CAScrollLayer" id="rno-qz-7fG"/>
+                    <connections>
+                        <outlet property="horizontalScrollingSwitch" destination="ntq-uq-d4b" id="uCp-f8-Ss6"/>
+                        <outlet property="scrollingView" destination="e4t-8p-Lzy" id="6c8-41-6Uj"/>
+                        <outlet property="verticalScrollingSwitch" destination="ACy-Iw-vlN" id="3Mv-YO-VCf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2X-A5-H4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="600"/>
+            <point key="canvasLocation" x="194" y="600"/>
         </scene>
         <!--Emitter Layer View Controller - CAEmitterLayer-->
         <scene sceneID="on7-Oq-k9D">
@@ -427,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDS-Vr-gz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="1402"/>
+            <point key="canvasLocation" x="1466" y="600"/>
         </scene>
         <!--Tiled Layer View Controller - CATiledLayer-->
         <scene sceneID="nGj-2M-P1B">
@@ -446,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHX-hF-JoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="600"/>
+            <point key="canvasLocation" x="618" y="600"/>
         </scene>
         <!--Replicator Layer View Controller - CAReplicatorLayer-->
         <scene sceneID="VOh-b5-yHY">
@@ -469,6 +515,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="03565_storkinayutthaya" width="720" height="450"/>
         <image name="align_center" width="24" height="24"/>
         <image name="align_just" width="24" height="24"/>
         <image name="align_left" width="24" height="24"/>

@@ -31,6 +31,7 @@
 		D284E444190529AD00C30943 /* CATransformLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E443190529AD00C30943 /* CATransformLayerViewController.m */; };
 		D284E447190529D600C30943 /* CAEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E446190529D600C30943 /* CAEmitterLayerViewController.m */; };
 		D284E44A19052A0500C30943 /* CAEAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D284E44919052A0500C30943 /* CAEAGLLayerViewController.m */; };
+		D29AEE37190C76F800795A3F /* ScrollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D29AEE36190C76F800795A3F /* ScrollingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		D284E446190529D600C30943 /* CAEmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEmitterLayerViewController.m; sourceTree = "<group>"; };
 		D284E448190529FD00C30943 /* CAEAGLLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEAGLLayerViewController.h; sourceTree = "<group>"; };
 		D284E44919052A0500C30943 /* CAEAGLLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEAGLLayerViewController.m; sourceTree = "<group>"; };
+		D29AEE35190C76F800795A3F /* ScrollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingView.h; sourceTree = "<group>"; };
+		D29AEE36190C76F800795A3F /* ScrollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				D284E443190529AD00C30943 /* CATransformLayerViewController.m */,
 				D284E41219050E1800C30943 /* Images.xcassets */,
 				D284E40C19050E1800C30943 /* Main.storyboard */,
+				D29AEE35190C76F800795A3F /* ScrollingView.h */,
+				D29AEE36190C76F800795A3F /* ScrollingView.m */,
 				D284E42F1905108000C30943 /* SubclassesViewController.h */,
 				D284E4301905108000C30943 /* SubclassesViewController.m */,
 				D284E40119050E1800C30943 /* Supporting Files */,
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D284E43E1905291700C30943 /* CAGradientLayerViewController.m in Sources */,
+				D29AEE37190C76F800795A3F /* ScrollingView.m in Sources */,
 				D284E4351905271300C30943 /* CAShapeLayerViewController.m in Sources */,
 				D284E43B190528CF00C30943 /* CATiledLayerViewController.m in Sources */,
 				D284E44A19052A0500C30943 /* CAEAGLLayerViewController.m in Sources */,
