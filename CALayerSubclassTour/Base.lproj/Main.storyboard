@@ -50,12 +50,12 @@
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="CATextLayer" id="wdx-yM-B9Q"/>
                         <segue destination="d6u-yC-xUm" kind="push" identifier="CAShapeLayer" id="wrb-0j-4f6"/>
                         <segue destination="LEu-4P-RjW" kind="push" identifier="CAScrollLayer" id="Rkx-R8-YCg"/>
-                        <segue destination="U94-NG-5lQ" kind="push" identifier="CATiledLayer" id="VJ6-vE-vsw"/>
                         <segue destination="1Xq-gb-6KS" kind="push" identifier="CAGradientLayer" id="XQQ-66-2mb"/>
                         <segue destination="LBd-Q4-VTC" kind="push" identifier="CAReplicatorLayer" id="zwr-2W-7iY"/>
                         <segue destination="HxT-QF-IKz" kind="push" identifier="CATransformLayer" id="LD7-Yf-GEQ"/>
                         <segue destination="anX-eH-sFo" kind="push" identifier="CAEmitterLayer" id="4S2-Ir-G1A"/>
                         <segue destination="sxf-DZ-NNc" kind="push" identifier="CAEAGLLayer" id="yTb-mD-vQe"/>
+                        <segue destination="U94-NG-5lQ" kind="push" identifier="CATiledLayer" id="pFc-uV-3lV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhC-Fh-kmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,8 +67,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CATextLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bYp-nB-bJs"/>
-                        <viewControllerLayoutGuide type="bottom" id="r6R-kA-Omh"/>
+                        <viewControllerLayoutGuide type="top" id="73I-6A-ACY"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLR-f4-Dqa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -158,15 +158,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="600"/>
+            <point key="canvasLocation" x="618" y="600"/>
         </scene>
         <!--Shape Layer View Controller - CAShapeLayer-->
         <scene sceneID="Ea1-oV-PNg">
             <objects>
                 <viewController id="d6u-yC-xUm" customClass="CAShapeLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6DP-FW-5ly"/>
-                        <viewControllerLayoutGuide type="bottom" id="LrV-WI-PDq"/>
+                        <viewControllerLayoutGuide type="top" id="Diw-CW-0C7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Frj-XQ-EcR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a5I-78-cah">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -314,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yQ-5y-me0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="1402"/>
+            <point key="canvasLocation" x="1466" y="600"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GCv-DJ-Jfu">
@@ -339,8 +339,8 @@
             <objects>
                 <viewController id="sxf-DZ-NNc" customClass="CAEAGLLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wS2-zP-CgQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="n7F-o8-hKI"/>
+                        <viewControllerLayoutGuide type="top" id="Xov-xl-rgv"/>
+                        <viewControllerLayoutGuide type="bottom" id="KUS-ug-yLP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DxX-yM-8ep">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -358,8 +358,8 @@
             <objects>
                 <viewController id="LEu-4P-RjW" customClass="CAScrollLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pP7-9P-YYt"/>
-                        <viewControllerLayoutGuide type="bottom" id="nmQ-bB-2fK"/>
+                        <viewControllerLayoutGuide type="top" id="6Ec-E8-jBm"/>
+                        <viewControllerLayoutGuide type="bottom" id="7UR-I7-MCp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5LR-JQ-OS3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -369,7 +369,7 @@
                                 <rect key="frame" x="35" y="99" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="03565_storkinayutthaya" translatesAutoresizingMaskIntoConstraints="NO" id="Q7T-KK-psb">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="storkinayutthaya" translatesAutoresizingMaskIntoConstraints="NO" id="Q7T-KK-psb">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
@@ -423,8 +423,8 @@
             <objects>
                 <viewController id="anX-eH-sFo" customClass="CAEmitterLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="x2w-Wt-6yV"/>
-                        <viewControllerLayoutGuide type="bottom" id="2RP-fx-mYA"/>
+                        <viewControllerLayoutGuide type="top" id="ecD-Ng-FS8"/>
+                        <viewControllerLayoutGuide type="bottom" id="hUy-h2-9at"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iyq-HU-rhX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -442,8 +442,8 @@
             <objects>
                 <viewController id="HxT-QF-IKz" customClass="CATransformLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vPM-cs-sME"/>
-                        <viewControllerLayoutGuide type="bottom" id="QqJ-l2-n91"/>
+                        <viewControllerLayoutGuide type="top" id="2H7-lY-E5N"/>
+                        <viewControllerLayoutGuide type="bottom" id="MZQ-gC-yrV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="inw-44-t83">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -461,8 +461,8 @@
             <objects>
                 <viewController id="1Xq-gb-6KS" customClass="CAGradientLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YcX-PI-1xl"/>
-                        <viewControllerLayoutGuide type="bottom" id="n8P-nQ-RdQ"/>
+                        <viewControllerLayoutGuide type="top" id="8XI-in-Iir"/>
+                        <viewControllerLayoutGuide type="bottom" id="LB1-HC-uhM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rrs-7i-23J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -473,34 +473,216 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDS-Vr-gz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="600"/>
+            <point key="canvasLocation" x="1042" y="600"/>
         </scene>
         <!--Tiled Layer View Controller - CATiledLayer-->
         <scene sceneID="nGj-2M-P1B">
             <objects>
-                <viewController id="U94-NG-5lQ" customClass="CATiledLayerViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="U94-NG-5lQ" customClass="CATiledLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="C32-S0-3Tt"/>
-                        <viewControllerLayoutGuide type="bottom" id="w55-F4-Grl"/>
+                        <viewControllerLayoutGuide type="top" id="RR6-Jh-a69"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Fs-Bq-6g1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1e9-cj-NRG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" maximumZoomScale="50" translatesAutoresizingMaskIntoConstraints="NO" id="dZf-bJ-fae">
+                                <rect key="frame" x="35" y="99" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ykp-YC-vFY" customClass="TilingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="U94-NG-5lQ" id="vyZ-h2-m0R"/>
+                                </connections>
+                            </scrollView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="50" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="fKI-ca-S1b">
+                                <rect key="frame" x="142" y="405" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tileSizeSliderChanged:" destination="U94-NG-5lQ" eventType="valueChanged" id="dkH-zq-dw8"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="MJk-Hy-IGX">
+                                <rect key="frame" x="142" y="367" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fadeDurationSliderChanged:" destination="U94-NG-5lQ" eventType="valueChanged" id="0Hm-dP-nnS"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fade duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7a-Wd-gnv">
+                                <rect key="frame" x="29" y="373" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tile size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-ax-qzL">
+                                <rect key="frame" x="74" y="411" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-FS-Bek">
+                                <rect key="frame" x="142" y="443" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="levelsOfDetailSliderChanged:" destination="U94-NG-5lQ" eventType="valueChanged" id="Trl-WY-bd4"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Levels of detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSr-jA-70g">
+                                <rect key="frame" x="20" y="449" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="CEl-HG-w8a">
+                                <rect key="frame" x="142" y="481" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="levelsOfDetailBiasSliderChanged:" destination="U94-NG-5lQ" eventType="valueChanged" id="eQD-qd-cXx"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jls-5X-bdS">
+                                <rect key="frame" x="257" y="373" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5f-XL-4oB">
+                                <rect key="frame" x="257" y="411" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdc-z9-kJg">
+                                <rect key="frame" x="257" y="449" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-BY-kqV">
+                                <rect key="frame" x="257" y="487" width="10" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail bias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxo-Nv-4AH">
+                                <rect key="frame" x="55" y="487" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoom to observe effect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-w4-x0P">
+                                <rect key="frame" x="71" y="70" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoom scale" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slk-EJ-qdJ">
+                                <rect key="frame" x="45" y="523" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s4-TI-lAs">
+                                <rect key="frame" x="256" y="523" width="20" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-sa-AiO">
+                                <rect key="frame" x="141" y="519" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="zoomScaleSliderChanged:" destination="U94-NG-5lQ" eventType="valueChanged" id="Wbw-OC-2Tl"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="CATiledLayer" id="yAw-Cw-Bhr"/>
+                    <connections>
+                        <outlet property="fadeDurationSlider" destination="MJk-Hy-IGX" id="NPm-jY-bhb"/>
+                        <outlet property="fadeDurationSliderValueLabel" destination="Jls-5X-bdS" id="JXy-CX-eQ5"/>
+                        <outlet property="levelsOfDetailBiasSlider" destination="CEl-HG-w8a" id="HET-ld-G1t"/>
+                        <outlet property="levelsOfDetailBiasSliderValueLabel" destination="N8C-BY-kqV" id="486-Z7-tWF"/>
+                        <outlet property="levelsOfDetailSlider" destination="kdb-FS-Bek" id="hHR-IS-917"/>
+                        <outlet property="levelsOfDetailSliderValueLabel" destination="wdc-z9-kJg" id="ByL-cl-93i"/>
+                        <outlet property="scrollView" destination="dZf-bJ-fae" id="yga-7v-Wzf"/>
+                        <outlet property="tileSizeSlider" destination="fKI-ca-S1b" id="F5L-Cc-fYj"/>
+                        <outlet property="tileSizeSliderValueLabel" destination="U5f-XL-4oB" id="SO1-so-Aev"/>
+                        <outlet property="viewForTiledLayer" destination="Ykp-YC-vFY" id="1gr-B6-mrz"/>
+                        <outlet property="zoomLabel" destination="SQe-w4-x0P" id="i8p-3r-jeF"/>
+                        <outlet property="zoomScaleSlider" destination="ggm-sa-AiO" id="JKw-SK-6Ni"/>
+                        <outlet property="zoomScaleSliderValueLabel" destination="6s4-TI-lAs" id="fwj-a0-aFj"/>
+                        <segue destination="3oI-bJ-8zS" kind="modal" identifier="ShowPhotoTilingView" modalTransitionStyle="flipHorizontal" id="YyT-4S-rqL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHX-hF-JoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="600"/>
+            <point key="canvasLocation" x="1466" y="1402"/>
+        </scene>
+        <!--Tiled Image Layer View Controller-->
+        <scene sceneID="VfN-wK-p7W">
+            <objects>
+                <viewController id="Wb7-R7-S89" customClass="CATiledImageLayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i43-CP-5MG"/>
+                        <viewControllerLayoutGuide type="bottom" id="6HD-mo-TC8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M3Q-jN-t4u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-Zt-CWn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-RT-fP5" customClass="TilingViewForImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="5120" height="3200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7JX-x3-tQv">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="jM8-6N-3E7">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="Wb7-R7-S89" id="lHI-Tx-MZv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="EAM-Zt-CWn" id="rnV-zr-lIA"/>
+                        <outlet property="tilingView" destination="I6W-RT-fP5" id="GfZ-bD-Y91"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rk7-fj-QfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="1402"/>
         </scene>
         <!--Replicator Layer View Controller - CAReplicatorLayer-->
         <scene sceneID="VOh-b5-yHY">
             <objects>
                 <viewController id="LBd-Q4-VTC" customClass="CAReplicatorLayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e3v-vP-6O0"/>
-                        <viewControllerLayoutGuide type="bottom" id="PqV-uB-y7p"/>
+                        <viewControllerLayoutGuide type="top" id="E01-QB-Xu5"/>
+                        <viewControllerLayoutGuide type="bottom" id="E4p-f4-vYG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vog-du-zj0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -513,13 +695,31 @@
             </objects>
             <point key="canvasLocation" x="1466" y="2204"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="64V-9V-rP0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3oI-bJ-8zS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="447-FA-pN6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wb7-R7-S89" kind="relationship" relationship="rootViewController" id="KDq-Kt-0bB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IV7-xW-Q8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="1402"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="03565_storkinayutthaya" width="720" height="450"/>
         <image name="align_center" width="24" height="24"/>
         <image name="align_just" width="24" height="24"/>
         <image name="align_left" width="24" height="24"/>
         <image name="align_right" width="24" height="24"/>
+        <image name="storkinayutthaya" width="720" height="450"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

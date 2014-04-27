@@ -50,16 +50,16 @@ typedef enum : NSUInteger {
   self.color = [UIColor colorWithHue:120/359.0f saturation:1.0f brightness:0.4f alpha:1.0f];
   
   self.openPath = [UIBezierPath bezierPath];
-  [self.self.openPath moveToPoint: CGPointMake(30.0f, 196.0f)];
-  [self.self.openPath addCurveToPoint: CGPointMake(112.0f, 12.5f)
-                        controlPoint1: CGPointMake(110.56f, 13.79f)
-                        controlPoint2: CGPointMake(112.07f, 13.01f)];
-  [self.self.openPath addCurveToPoint: CGPointMake(194.0f, 196.0f)
-                        controlPoint1: CGPointMake(111.9f, 11.81f)
-                        controlPoint2: CGPointMake(194.0f, 196.0f)];
-  [self.self.openPath addLineToPoint: CGPointMake(30.0f, 85.68f)];
-  [self.self.openPath addLineToPoint: CGPointMake(194.0f, 48.91f)];
-  [self.self.openPath addLineToPoint: CGPointMake(30.0f, 196.0f)];
+  [self.self.openPath moveToPoint:(CGPoint){30.0f, 196.0f}];
+  [self.self.openPath addCurveToPoint:(CGPoint){112.0f, 12.5f}
+                        controlPoint1:(CGPoint){110.56f, 13.79f}
+                        controlPoint2:(CGPoint){112.07f, 13.01f}];
+  [self.self.openPath addCurveToPoint:(CGPoint){194.0f, 196.0f}
+                        controlPoint1:(CGPoint){111.9f, 11.81f}
+                        controlPoint2:(CGPoint){194.0f, 196.0f}];
+  [self.self.openPath addLineToPoint:(CGPoint){30.0f, 85.68f}];
+  [self.self.openPath addLineToPoint:(CGPoint){194.0f, 48.91f}];
+  [self.self.openPath addLineToPoint:(CGPoint){30.0f, 196.0f}];
   
   CGMutablePathRef closedPathRef = CGPathCreateMutableCopy(self.openPath.CGPath);
   self.closedPath = [UIBezierPath bezierPath];

@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "UIImage+TileCutter.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  // Override point for customization after application launch.
+  CGFloat sideLength = 640.0f;
+  [UIImage saveTilesOfSize:(CGSize){sideLength, sideLength} imageName:FileName];
+  
   return YES;
 }
 							
