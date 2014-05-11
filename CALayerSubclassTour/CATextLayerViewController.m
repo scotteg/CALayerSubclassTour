@@ -26,12 +26,12 @@ typedef enum : NSUInteger {
 
 @interface CATextLayerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *viewForTextLayer;
-@property (weak, nonatomic) CATextLayer *textLayer;
 @property (weak, nonatomic) IBOutlet UILabel *fontSizeSliderValueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *fontSizeSlider;
 @property (weak, nonatomic) IBOutlet UISwitch *wrapTextSwitch;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *alignmentModeSegmentedControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *truncationModeSegmentedControl;
+@property (strong, nonatomic) CATextLayer *textLayer;
 @property (assign, nonatomic) CGFloat fontSize;
 @end
 

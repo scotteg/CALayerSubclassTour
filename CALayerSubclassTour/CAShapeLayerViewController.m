@@ -27,10 +27,6 @@ typedef enum : NSUInteger {
 
 @interface CAShapeLayerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *viewForShapeLayer;
-@property (strong, nonatomic) CAShapeLayer *shapeLayer;
-@property (strong, nonatomic) UIColor *color;
-@property (strong, nonatomic) UIBezierPath *openPath;
-@property (strong, nonatomic) UIBezierPath *closedPath;
 @property (weak, nonatomic) IBOutlet UISwitch *closePathSwitch;
 @property (weak, nonatomic) IBOutlet UISlider *hueSlider;
 @property (weak, nonatomic) IBOutlet UISwitch *fillSwitch;
@@ -39,6 +35,10 @@ typedef enum : NSUInteger {
 @property (weak, nonatomic) IBOutlet UISwitch *lineDashSwitch;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lineCapSegmentedControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *lineJoinSegmentedControl;
+@property (strong, nonatomic) CAShapeLayer *shapeLayer;
+@property (strong, nonatomic) UIColor *color;
+@property (strong, nonatomic) UIBezierPath *openPath;
+@property (strong, nonatomic) UIBezierPath *closedPath;
 @end
 
 @implementation CAShapeLayerViewController
@@ -50,16 +50,16 @@ typedef enum : NSUInteger {
   self.color = [UIColor colorWithHue:120/359.0f saturation:1.0f brightness:0.4f alpha:1.0f];
   
   self.openPath = [UIBezierPath bezierPath];
-  [self.self.openPath moveToPoint:(CGPoint){30.0f, 196.0f}];
-  [self.self.openPath addCurveToPoint:(CGPoint){112.0f, 12.5f}
+  [self.openPath moveToPoint:(CGPoint){30.0f, 196.0f}];
+  [self.openPath addCurveToPoint:(CGPoint){112.0f, 12.5f}
                         controlPoint1:(CGPoint){110.56f, 13.79f}
                         controlPoint2:(CGPoint){112.07f, 13.01f}];
-  [self.self.openPath addCurveToPoint:(CGPoint){194.0f, 196.0f}
+  [self.openPath addCurveToPoint:(CGPoint){194.0f, 196.0f}
                         controlPoint1:(CGPoint){111.9f, 11.81f}
                         controlPoint2:(CGPoint){194.0f, 196.0f}];
-  [self.self.openPath addLineToPoint:(CGPoint){30.0f, 85.68f}];
-  [self.self.openPath addLineToPoint:(CGPoint){194.0f, 48.91f}];
-  [self.self.openPath addLineToPoint:(CGPoint){30.0f, 196.0f}];
+  [self.openPath addLineToPoint:(CGPoint){30.0f, 85.68f}];
+  [self.openPath addLineToPoint:(CGPoint){194.0f, 48.91f}];
+  [self.openPath addLineToPoint:(CGPoint){30.0f, 196.0f}];
   
   CGMutablePathRef closedPathRef = CGPathCreateMutableCopy(self.openPath.CGPath);
   self.closedPath = [UIBezierPath bezierPath];
@@ -68,7 +68,7 @@ typedef enum : NSUInteger {
   CGPathRelease(closedPathRef);
   
   self.shapeLayer = [CAShapeLayer layer];
-  self.shapeLayer.path = self.self.openPath.CGPath;
+  self.shapeLayer.path = self.openPath.CGPath;
   self.shapeLayer.fillColor = nil;
   self.shapeLayer.fillRule = kCAFillRuleNonZero;
   self.shapeLayer.lineCap = kCALineCapButt;
