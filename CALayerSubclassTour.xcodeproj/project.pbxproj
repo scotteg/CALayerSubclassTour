@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D211EA4E190E65BE00C1B449 /* TilingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D211EA4C190E65BE00C1B449 /* TilingView.m */; };
+		D262BB8B1920E266004AFD60 /* TrackBall.m in Sources */ = {isa = PBXBuildFile; fileRef = D262BB8A1920E266004AFD60 /* TrackBall.m */; };
 		D27C97381912566C00FAB816 /* CATiledLayer+Adjustable.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C97371912566C00FAB816 /* CATiledLayer+Adjustable.m */; };
 		D284E3FB19050E1800C30943 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284E3FA19050E1800C30943 /* Foundation.framework */; };
 		D284E3FD19050E1800C30943 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D284E3FC19050E1800C30943 /* CoreGraphics.framework */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		D211EA4C190E65BE00C1B449 /* TilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilingView.m; sourceTree = "<group>"; };
 		D211EA4D190E65BE00C1B449 /* TilingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilingView.h; sourceTree = "<group>"; };
+		D262BB891920E266004AFD60 /* TrackBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackBall.h; sourceTree = "<group>"; };
+		D262BB8A1920E266004AFD60 /* TrackBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackBall.m; sourceTree = "<group>"; };
 		D27C97361912566C00FAB816 /* CATiledLayer+Adjustable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATiledLayer+Adjustable.h"; sourceTree = "<group>"; };
 		D27C97371912566C00FAB816 /* CATiledLayer+Adjustable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATiledLayer+Adjustable.m"; sourceTree = "<group>"; };
 		D284E3F719050E1800C30943 /* CALayerSubclassTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALayerSubclassTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,8 +189,6 @@
 				D284E443190529AD00C30943 /* CATransformLayerViewController.m */,
 				D284E41219050E1800C30943 /* Images.xcassets */,
 				D284E40C19050E1800C30943 /* Main.storyboard */,
-				D29AEE35190C76F800795A3F /* ScrollingView.h */,
-				D29AEE36190C76F800795A3F /* ScrollingView.m */,
 				D284E42F1905108000C30943 /* SubclassesViewController.h */,
 				D284E4301905108000C30943 /* SubclassesViewController.m */,
 				D284E40119050E1800C30943 /* Supporting Files */,
@@ -195,6 +196,8 @@
 				D211EA4C190E65BE00C1B449 /* TilingView.m */,
 				D2D4CB87191684130037D335 /* TilingViewForImage.h */,
 				D2D4CB88191684130037D335 /* TilingViewForImage.m */,
+				D262BB891920E266004AFD60 /* TrackBall.h */,
+				D262BB8A1920E266004AFD60 /* TrackBall.m */,
 				D2D4CB3D191662560037D335 /* UIImage+TileCutter.h */,
 				D2D4CB3E191662560037D335 /* UIImage+TileCutter.m */,
 			);
@@ -204,11 +207,13 @@
 		D284E40119050E1800C30943 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D2F7CA1F1918EC40000941E8 /* earthwindandfire.jpg */,
 				D284E40219050E1800C30943 /* CALayerSubclassTour-Info.plist */,
+				D284E40819050E1800C30943 /* CALayerSubclassTour-Prefix.pch */,
+				D2F7CA1F1918EC40000941E8 /* earthwindandfire.jpg */,
 				D284E40319050E1800C30943 /* InfoPlist.strings */,
 				D284E40619050E1800C30943 /* main.m */,
-				D284E40819050E1800C30943 /* CALayerSubclassTour-Prefix.pch */,
+				D29AEE35190C76F800795A3F /* ScrollingView.h */,
+				D29AEE36190C76F800795A3F /* ScrollingView.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				D284E4381905285800C30943 /* CAScrollLayerViewController.m in Sources */,
 				D284E447190529D600C30943 /* CAEmitterLayerViewController.m in Sources */,
 				D284E40B19050E1800C30943 /* AppDelegate.m in Sources */,
+				D262BB8B1920E266004AFD60 /* TrackBall.m in Sources */,
 				D284E40719050E1800C30943 /* main.m in Sources */,
 				D284E444190529AD00C30943 /* CATransformLayerViewController.m in Sources */,
 				D284E4411905297D00C30943 /* CAReplicatorLayerViewController.m in Sources */,

@@ -41,7 +41,6 @@
   [self updateLevelsOfDetailSliderValueLabel];
   [self updateLevelsOfDetailBiasSliderValueLabel];
   [self updateZoomScaleSliderValueLabel];
-  self.zoomLabel.hidden = YES;
   
   self.scrollView.contentSize = self.scrollView.frame.size;
   
