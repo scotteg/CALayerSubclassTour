@@ -20,11 +20,11 @@
   self.subclasses = @[
     @[@"CAScrollLayer", @"Display portion of a scrollable layer"],
     @[@"CATextLayer", @"Render plain text or attributed strings"],
-    @[@"CAGradientLayer", @"Apply a color gradient over background"],
-    @[@"CAShapeLayer", @"Draw using scalable vector graphics"],
-    @[@"CATiledLayer", @"Split large content into tiles"],
+    @[@"CAGradientLayer", @"Apply a color gradient over the background"],
     @[@"CAReplicatorLayer", @"Duplicate a source layer"],
-    @[@"CATransformLayer", @"Create 3D structures"],
+    @[@"CATiledLayer", @"Asynchronously draw layer content in tiles"],
+    @[@"CAShapeLayer", @"Draw using scalable vector paths"],
+    @[@"CATransformLayer", @"Draw 3D structures"],
     @[@"CAEmitterLayer", @"Render animated particles"],
     @[@"CAEAGLLayer", @"Draw OpenGL content"]
   ];

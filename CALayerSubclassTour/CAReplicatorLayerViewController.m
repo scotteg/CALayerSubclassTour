@@ -65,12 +65,10 @@ typedef enum : NSUInteger {
   self.layer.frame = (CGRect){midX, 0.0f, layerWidth, layerWidth * LengthMultiplier};
   self.layer.backgroundColor = [UIColor whiteColor].CGColor;
   
-//  self.layer.opacity = 0.0f;
   self.fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
   self.fadeAnimation.fromValue = @(1.0f);
   self.fadeAnimation.toValue = @(0.0f);
   self.fadeAnimation.repeatCount = CGFLOAT_MAX;
-//  [self setLayerFadeAnimation];
   
   [self.replicatorLayer addSublayer:self.layer];
   
