@@ -40,16 +40,16 @@ typedef enum : NSUInteger {
   
   self.gradientLayer = [CAGradientLayer layer];
   self.gradientLayer.frame = self.viewForGradientLayer.bounds;
-  self.colors = @[(__bridge id)[UIColor colorWithRed:209/255.0f green:0.0f blue:0.0f alpha:1.0f].CGColor,
-    (__bridge id)[UIColor colorWithRed:1.0f green:102/255.0f blue:34/255.0f alpha:1.0f].CGColor,
-    (__bridge id)[UIColor colorWithRed:1.0f green:218/255.0f blue:33/255.0f alpha:1.0f].CGColor,
-    (__bridge id)[UIColor colorWithRed:51/255.0f green:221/255.0f blue:0.0f alpha:1.0f].CGColor,
-    (__bridge id)[UIColor colorWithRed:17/255.0f green:51/255.0f blue:204/255.0f alpha:1.0f].CGColor,
-    (__bridge id)[UIColor colorWithRed:34/255.0f green:0.0f blue:102/255.0f alpha:1.0f].CGColor,
-    (__bridge id)[UIColor colorWithRed:51/255.0f green:0.0f blue:68/255.0f alpha:1.0f].CGColor];
+  self.colors = @[(__bridge id)[UIColor colorWithRed:209/TFF green:Zero blue:Zero alpha:One].CGColor,
+    (__bridge id)[UIColor colorWithRed:One green:102/TFF blue:34/TFF alpha:One].CGColor,
+    (__bridge id)[UIColor colorWithRed:One green:218/TFF blue:33/TFF alpha:One].CGColor,
+    (__bridge id)[UIColor colorWithRed:51/TFF green:221/TFF blue:Zero alpha:One].CGColor,
+    (__bridge id)[UIColor colorWithRed:17/TFF green:51/TFF blue:204/TFF alpha:One].CGColor,
+    (__bridge id)[UIColor colorWithRed:34/TFF green:Zero blue:102/TFF alpha:One].CGColor,
+    (__bridge id)[UIColor colorWithRed:51/TFF green:Zero blue:68/TFF alpha:One].CGColor];
   self.gradientLayer.colors = self.colors;
-  self.gradientLayer.startPoint = (CGPoint){0.5f, 0.0f};
-  self.gradientLayer.endPoint = (CGPoint){0.5f, 1.0f};
+  self.gradientLayer.startPoint = (CGPoint){Half, Zero};
+  self.gradientLayer.endPoint = (CGPoint){Half, One};
   self.locations = @[@0.0, @(1/6.0f), @(1/3.0f), @0.5, @(2/3.0f), @(5/6.0f), @1.0];
   self.gradientLayer.locations = self.locations;
   [self.viewForGradientLayer.layer addSublayer:self.gradientLayer];
@@ -66,13 +66,13 @@ typedef enum : NSUInteger {
 
 - (IBAction)startPointSliderChanged:(UISlider *)sender
 {
-  self.gradientLayer.startPoint = (CGPoint){sender.value, 0.0f};
+  self.gradientLayer.startPoint = (CGPoint){sender.value, Zero};
   [self updateStartAndEndPointValueLabels];
 }
 
 - (IBAction)endPointSliderChanged:(UISlider *)sender
 {
-  self.gradientLayer.endPoint = (CGPoint){sender.value, 1.0f};
+  self.gradientLayer.endPoint = (CGPoint){sender.value, One};
   [self updateStartAndEndPointValueLabels];
 }
 

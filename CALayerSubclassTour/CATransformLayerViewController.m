@@ -44,7 +44,7 @@ typedef enum : NSUInteger {
   [super viewDidLoad];
   
   self.swipeMeTextLayer = [CATextLayer layer];
-  self.swipeMeTextLayer.frame = (CGRect){0.0f, SideLength / 4.0f, SideLength, SideLength / 2.0f};
+  self.swipeMeTextLayer.frame = (CGRect){Zero, SideLength / 4.0f, SideLength, SideLength / Two};
   self.swipeMeTextLayer.string = @"Swipe me";
   self.swipeMeTextLayer.alignmentMode = kCAAlignmentCenter;
   self.swipeMeTextLayer.foregroundColor = [UIColor whiteColor].CGColor;
@@ -66,41 +66,40 @@ typedef enum : NSUInteger {
 - (void)buildCube
 {
   self.transformLayer = [CATransformLayer layer];
-  CGFloat radiansFor90Degrees = 90.0f * M_PI / 180.0f;
   
   CALayer *layer = [self sideLayerWithColor:self.redColor];
   [layer addSublayer:self.swipeMeTextLayer];
   [self.transformLayer addSublayer:layer];
   
   layer = [self sideLayerWithColor:self.orangeColor];
-  CATransform3D transform = CATransform3DMakeTranslation(SideLength / 2.0f, 0.0f, SideLength / -2.0f);
-  transform = CATransform3DRotate(transform, radiansFor90Degrees, 0.0f, 1.0f, 0.0f);
+  CATransform3D transform = CATransform3DMakeTranslation(SideLength / Two, Zero, SideLength / -Two);
+  transform = CATransform3DRotate(transform, DEGREES_TO_RADIANS(90), Zero, One, Zero);
   layer.transform = transform;
   [self.transformLayer addSublayer:layer];
   
   layer = [self sideLayerWithColor:self.yellowColor];
-  layer.transform = CATransform3DMakeTranslation(0.0f, 0.0f, -SideLength);
+  layer.transform = CATransform3DMakeTranslation(Zero, Zero, -SideLength);
   [self.transformLayer addSublayer:layer];
   
   layer = [self sideLayerWithColor:self.greenColor];
-  transform = CATransform3DMakeTranslation(SideLength / -2.0f, 0.0, SideLength / -2.0f);
-  transform = CATransform3DRotate(transform, radiansFor90Degrees, 0.0f, 1.0f, 0.0f);
+  transform = CATransform3DMakeTranslation(SideLength / -Two, 0.0, SideLength / -Two);
+  transform = CATransform3DRotate(transform, DEGREES_TO_RADIANS(90), Zero, One, Zero);
   layer.transform = transform;
   [self.transformLayer addSublayer:layer];
   
   layer = [self sideLayerWithColor:self.blueColor];
-  transform = CATransform3DMakeTranslation(0.0f, SideLength / -2.0f, SideLength / -2.0f);
-  transform = CATransform3DRotate(transform, radiansFor90Degrees, 1.0f, 0.0f, 0.0f);
+  transform = CATransform3DMakeTranslation(Zero, SideLength / -Two, SideLength / -Two);
+  transform = CATransform3DRotate(transform, DEGREES_TO_RADIANS(90), One, Zero, Zero);
   layer.transform = transform;
   [self.transformLayer addSublayer:layer];
   
   layer = [self sideLayerWithColor:self.purpleColor];
-  transform = CATransform3DMakeTranslation(0.0f, SideLength / 2.0f, SideLength / -2.0f);
-  transform = CATransform3DRotate(transform, radiansFor90Degrees, 1.0f, 0.0f, 0.0f);
+  transform = CATransform3DMakeTranslation(Zero, SideLength / Two, SideLength / -Two);
+  transform = CATransform3DRotate(transform, DEGREES_TO_RADIANS(90), One, Zero, Zero);
   layer.transform = transform;
   [self.transformLayer addSublayer:layer];
   
-  self.transformLayer.anchorPointZ = SideLength / -2.0f;
+  self.transformLayer.anchorPointZ = SideLength / -Two;
   [self.viewForTransformLayer.layer addSublayer:self.transformLayer];
 }
 
@@ -126,7 +125,7 @@ typedef enum : NSUInteger {
 
 - (IBAction)colorAlphaSwitchChanged:(UISwitch *)sender
 {
-  CGFloat alpha = sender.on ? ReducedAlpha : 1.0f;
+  CGFloat alpha = sender.on ? ReducedAlpha : One;
   
   switch ([self.colorAlphaSwitches indexOfObject:sender]) {
     case ColorRed:
@@ -161,11 +160,11 @@ typedef enum : NSUInteger {
 
 - (void)showBoxTappedLabel
 {
-  self.boxTappedLabel.alpha = 1.0f;
+  self.boxTappedLabel.alpha = One;
   self.boxTappedLabel.hidden = NO;
   
   [UIView animateWithDuration:0.5 delay:1.0 options:kNilOptions animations:^{
-    self.boxTappedLabel.alpha = 0.0f;
+    self.boxTappedLabel.alpha = Zero;
   } completion:^(BOOL finished) {
     self.boxTappedLabel.hidden = YES;
   }];

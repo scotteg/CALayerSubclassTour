@@ -53,21 +53,21 @@ typedef enum : NSUInteger {
   self.replicatorLayer.instanceBlueOffset = [self offsetValueForSwitch:self.offsetBlueSwitch];
   self.replicatorLayer.instanceAlphaOffset = [self offsetValueForSwitch:self.offsetAlphaSwitch];
   
-  CGFloat angle = (M_PI * 2.0f) / self.replicatorLayer.instanceCount;
-  CATransform3D transform = CATransform3DMakeRotation(angle, 0.0f, 0.0f, 1.0f);
+  CGFloat angle = (M_PI * Two) / self.replicatorLayer.instanceCount;
+  CATransform3D transform = CATransform3DMakeRotation(angle, Zero, Zero, One);
   self.replicatorLayer.instanceTransform = transform;
   
   [self.viewForReplicatorLayer.layer addSublayer:self.replicatorLayer];
   
   self.layer = [CALayer layer];
   CGFloat layerWidth = self.layerSizeSlider.value;
-  CGFloat midX = CGRectGetMidX(self.viewForReplicatorLayer.bounds) - layerWidth / 2.0f;
-  self.layer.frame = (CGRect){midX, 0.0f, layerWidth, layerWidth * LengthMultiplier};
+  CGFloat midX = CGRectGetMidX(self.viewForReplicatorLayer.bounds) - layerWidth / Two;
+  self.layer.frame = (CGRect){midX, Zero, layerWidth, layerWidth * LengthMultiplier};
   self.layer.backgroundColor = [UIColor whiteColor].CGColor;
   
   self.fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-  self.fadeAnimation.fromValue = @(1.0f);
-  self.fadeAnimation.toValue = @(0.0f);
+  self.fadeAnimation.fromValue = @(One);
+  self.fadeAnimation.toValue = @(Zero);
   self.fadeAnimation.repeatCount = CGFLOAT_MAX;
   
   [self.replicatorLayer addSublayer:self.layer];
@@ -79,7 +79,7 @@ typedef enum : NSUInteger {
 
 - (void)setLayerFadeAnimation
 {
-  self.layer.opacity = 0.0f;
+  self.layer.opacity = Zero;
   self.fadeAnimation.duration = self.instanceDelaySlider.value;
   [self.layer addAnimation:self.fadeAnimation forKey:FadeAnimation];
 }
@@ -120,8 +120,8 @@ typedef enum : NSUInteger {
     self.replicatorLayer.instanceDelay = sender.value / self.replicatorLayer.instanceCount;
     [self setLayerFadeAnimation];
   } else {
-    self.replicatorLayer.instanceDelay = 0.0f;
-    self.layer.opacity = 1.0f;
+    self.replicatorLayer.instanceDelay = Zero;
+    self.layer.opacity = One;
     [self.layer removeAllAnimations];
   }
   
@@ -131,9 +131,9 @@ typedef enum : NSUInteger {
 - (CGFloat)offsetValueForSwitch:(UISwitch *)offsetSwitch
 {
   if (offsetSwitch == self.offsetAlphaSwitch) {
-    return offsetSwitch.on ? -1.0f / self.replicatorLayer.instanceCount : 0.0f;
+    return offsetSwitch.on ? -One / self.replicatorLayer.instanceCount : Zero;
   } else {
-    return offsetSwitch.on ? 0.0f : -0.05f;
+    return offsetSwitch.on ? Zero : -0.05f;
   }
 }
 

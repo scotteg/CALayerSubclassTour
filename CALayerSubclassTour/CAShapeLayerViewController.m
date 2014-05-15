@@ -47,7 +47,7 @@ typedef enum : NSUInteger {
 {
   [super viewDidLoad];
   
-  self.color = [UIColor colorWithHue:120/359.0f saturation:1.0f brightness:0.4f alpha:1.0f];
+  self.color = [UIColor colorWithHue:120/359.0f saturation:One brightness:0.4f alpha:One];
   
   self.openPath = [UIBezierPath bezierPath];
   [self.openPath moveToPoint:(CGPoint){30.0f, 196.0f}];
@@ -73,9 +73,9 @@ typedef enum : NSUInteger {
   self.shapeLayer.fillRule = kCAFillRuleNonZero;
   self.shapeLayer.lineCap = kCALineCapButt;
   self.shapeLayer.lineDashPattern = nil;
-  self.shapeLayer.lineDashPhase = 0.0f;
+  self.shapeLayer.lineDashPhase = Zero;
   self.shapeLayer.lineJoin = kCALineJoinMiter;
-  self.shapeLayer.lineWidth = 1.0f;
+  self.shapeLayer.lineWidth = One;
   self.shapeLayer.miterLimit = 4.0f;
   self.shapeLayer.strokeColor = self.color.CGColor;
 
@@ -103,7 +103,7 @@ typedef enum : NSUInteger {
 - (IBAction)hueSliderChanged:(UISlider *)sender
 {
   CGFloat hue = sender.value / 359.0f;
-  UIColor *color = [UIColor colorWithHue:hue saturation:hue brightness:0.4f alpha:1.0f];
+  UIColor *color = [UIColor colorWithHue:hue saturation:hue brightness:0.4f alpha:One];
   self.shapeLayer.fillColor = self.fillSwitch.on ? color.CGColor : nil;
   self.shapeLayer.strokeColor = color.CGColor;
   self.color = color;
@@ -149,7 +149,7 @@ typedef enum : NSUInteger {
     self.shapeLayer.lineDashPhase = 25.0f;
   } else {
     self.shapeLayer.lineDashPattern = nil;
-    self.shapeLayer.lineDashPhase = 0.0f;
+    self.shapeLayer.lineDashPhase = Zero;
   }
 }
 

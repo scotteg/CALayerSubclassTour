@@ -35,7 +35,7 @@ static CGFloat const SideLength = 100.0f;
   CGFloat green = drand48();
   CGFloat blue = drand48();
   
-  CGContextSetRGBFillColor(ctx, red, green, blue, 1.0f);
+  CGContextSetRGBFillColor(ctx, red, green, blue, One);
   CGContextFillRect(ctx, rect);
   
   CGFloat x = bounds.origin.x;
@@ -55,9 +55,9 @@ static CGFloat const SideLength = 100.0f;
   green = drand48();
   blue = drand48();
   
-  CGContextSetRGBFillColor(ctx, red, green, blue, 1.0f);
+  CGContextSetRGBFillColor(ctx, red, green, blue, One);
   CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
-  CGContextSetLineWidth(ctx, 2.0f / scale);
+  CGContextSetLineWidth(ctx, Two / scale);
   CGContextDrawPath(ctx, kCGPathEOFillStroke);
 }
 

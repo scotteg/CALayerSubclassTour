@@ -62,7 +62,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
   [super viewWillAppear:animated];
-  self.scrollView.zoomScale = 1.0f;
+  self.scrollView.zoomScale = One;
 }
 
 - (void)photoButtonTapped
@@ -100,11 +100,11 @@
 
 - (void)showZoomLabel
 {
-  self.zoomLabel.alpha = 1.0f;
+  self.zoomLabel.alpha = One;
   self.zoomLabel.hidden = NO;
   
   [UIView animateWithDuration:0.5 delay:1.0 options:kNilOptions animations:^{
-    self.zoomLabel.alpha = 0.0f;
+    self.zoomLabel.alpha = Zero;
   } completion:^(BOOL finished) {
     self.zoomLabel.hidden = YES;
   }];
