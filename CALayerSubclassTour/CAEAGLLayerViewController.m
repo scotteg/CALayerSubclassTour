@@ -7,9 +7,17 @@
 //
 
 #import "CAEAGLLayerViewController.h"
+@import GLKit;
 
 @interface CAEAGLLayerViewController ()
-
+@property (weak, nonatomic) IBOutlet UIView *viewForEAGLLayer;
+@property (strong, nonatomic) CAEAGLLayer *eaglLayer;
+@property (strong, nonatomic) EAGLContext *context;
+@property (assign, nonatomic) GLuint framebuffer;
+@property (assign, nonatomic) GLuint colorRenderBuffer;
+@property (assign, nonatomic) GLint framebufferWidth;
+@property (assign, nonatomic) GLint framebufferHeight;
+@property (strong, nonatomic) GLKBaseEffect *glkBaseEffect;
 @end
 
 @implementation CAEAGLLayerViewController
@@ -17,6 +25,93 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+  [EAGLContext setCurrentContext:self.context];
+  
+  self.eaglLayer = [CAEAGLLayer layer];
+  self.eaglLayer.frame = self.viewForEAGLLayer.bounds;
+  self.eaglLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking : @NO,
+                                        kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};
+  [self.viewForEAGLLayer.layer addSublayer:self.eaglLayer];
+  
+  self.glkBaseEffect = [GLKBaseEffect new];
+  [self setupBuffers];
+  [self render];
+}
+
+- (void)setupBuffers
+{
+  glGenFramebuffers(1, &_framebuffer);
+  glBindFramebuffer(GL_FRAMEBUFFER, self.framebuffer);
+  glGenRenderbuffers(1, &_colorRenderBuffer);
+  glBindRenderbuffer(GL_RENDERBUFFER, self.colorRenderBuffer);
+  [self.context renderbufferStorage:GL_RENDERBUFFER fromDrawable:self.eaglLayer];
+  glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_framebufferWidth);
+  glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_framebufferHeight);
+  glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, self.colorRenderBuffer);
+}
+
+- (void)render
+{
+  glBindFramebuffer(GL_FRAMEBUFFER, self.framebuffer);
+  glViewport(0, 0, self.framebufferWidth, self.framebufferHeight);
+  
+  [self.glkBaseEffect prepareToDraw];
+  
+  glClearColor(One, One, One, One);
+  glClear(GL_COLOR_BUFFER_BIT);
+  
+  GLfloat vertices[] = {
+    Zero, Zero, Zero,
+    -Half, -One, Zero,
+    Half, -One, Zero,
+    Zero, Zero, Zero,
+    Half, -One, Zero,
+    One, Zero, Zero,
+    Zero, Zero, Zero,
+    One, Zero, Zero,
+    Half, One, Zero,
+    Zero, Zero, Zero,
+    Half, One, Zero,
+    -Half, One, Zero,
+    Zero, Zero, Zero,
+    -Half, One, Zero,
+    -One, Zero, Zero,
+    Zero, Zero, Zero,
+    -One, Zero, Zero,
+    -Half, -One, Zero
+  };
+  
+  GLfloat colors[] = {
+    One, Zero, Zero, One,
+    One, Zero, Zero, One,
+    One, Zero, Zero, One,
+    One, Zero, Zero, One,
+    One, Zero, Zero, One,
+    One, Zero, Zero, One,
+    Zero, One, Zero, One,
+    Zero, One, Zero, One,
+    Zero, One, Zero, One,
+    Zero, One, Zero, One,
+    Zero, One, Zero, One,
+    Zero, One, Zero, One,
+    Zero, Zero, One, One,
+    Zero, Zero, One, One,
+    Zero, Zero, One, One,
+    Zero, Zero, One, One,
+    Zero, Zero, One, One,
+    Zero, Zero, One, One
+  };
+  
+  glEnableVertexAttribArray(GLKVertexAttribPosition);
+  glEnableVertexAttribArray(GLKVertexAttribColor);
+  glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 0, vertices);
+  glVertexAttribPointer(GLKVertexAttribColor, 4, GL_FLOAT, GL_FALSE, 0, colors);
+  glDrawArrays(GL_TRIANGLES, 0, 18);
+  
+  glBindRenderbuffer(GL_RENDERBUFFER, self.colorRenderBuffer);
+  [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
 @end

@@ -10,6 +10,7 @@
 
 @implementation Constants
 
+CGFloat const Quarter = 0.25f;
 CGFloat const Half = 0.5f;
 CGFloat const Zero = 0.0f;
 CGFloat const One = 1.0f;

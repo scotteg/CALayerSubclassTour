@@ -10,6 +10,7 @@
 
 @interface Constants : NSObject
 
+extern CGFloat const Quarter;
 extern CGFloat const Half;
 extern CGFloat const Zero;
 extern CGFloat const One;
