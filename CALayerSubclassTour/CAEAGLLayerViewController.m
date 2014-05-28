@@ -17,7 +17,7 @@
 @property (assign, nonatomic) GLuint colorRenderBuffer;
 @property (assign, nonatomic) GLint framebufferWidth;
 @property (assign, nonatomic) GLint framebufferHeight;
-@property (strong, nonatomic) GLKBaseEffect *glkBaseEffect;
+@property (strong, nonatomic) GLKBaseEffect *effect;
 @end
 
 @implementation CAEAGLLayerViewController
@@ -35,7 +35,7 @@
                                         kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};
   [self.viewForEAGLLayer.layer addSublayer:self.eaglLayer];
   
-  self.glkBaseEffect = [GLKBaseEffect new];
+  self.effect = [GLKBaseEffect new];
   [self setupBuffers];
   [self render];
 }
@@ -57,7 +57,7 @@
   glBindFramebuffer(GL_FRAMEBUFFER, self.framebuffer);
   glViewport(0, 0, self.framebufferWidth, self.framebufferHeight);
   
-  [self.glkBaseEffect prepareToDraw];
+  [self.effect prepareToDraw];
   
   glClearColor(One, One, One, One);
   glClear(GL_COLOR_BUFFER_BIT);

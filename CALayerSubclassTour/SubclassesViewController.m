@@ -24,9 +24,9 @@
     @[@"CAReplicatorLayer", @"Duplicate a source layer"],
     @[@"CATiledLayer", @"Asynchronously draw layer content in tiles"],
     @[@"CAShapeLayer", @"Draw using scalable vector paths"],
+    @[@"CAEAGLLayer", @"Draw OpenGL content"],
     @[@"CATransformLayer", @"Draw 3D structures"],
-    @[@"CAEmitterLayer", @"Render animated particles"],
-    @[@"CAEAGLLayer", @"Draw OpenGL content"]
+    @[@"CAEmitterLayer", @"Render animated particles"]
   ];
 }
 
