@@ -70,7 +70,7 @@ typedef enum : NSUInteger {
 
 - (IBAction)fontSizeSliderChanged:(UISlider *)sender
 {
-  self.fontSizeSliderValueLabel.text = [NSString stringWithFormat:@"%0.0f%%", self.fontSizeSlider.value * 100];
+  self.fontSizeSliderValueLabel.text = [NSString stringWithFormat:@"%0.0f%%", sender.value * 100];
   self.fontSize = BaseFontSize * sender.value;
   [self viewDidLayoutSubviews];
 }

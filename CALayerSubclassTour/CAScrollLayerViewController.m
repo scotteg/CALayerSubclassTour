@@ -21,7 +21,6 @@
 {
   [super viewDidLoad];
   
-  self.scrollingView.layer.masksToBounds = YES;
   [(CAScrollLayer *)self.scrollingView.layer setScrollMode:kCAScrollBoth];
   
   UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc]
