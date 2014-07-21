@@ -20,10 +20,10 @@ typedef enum : NSUInteger {
 
 @interface CAReplicatorLayerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *viewForReplicatorLayer;
-@property (weak, nonatomic) IBOutlet UISlider *instanceCountSlider;
-@property (weak, nonatomic) IBOutlet UILabel *instanceCountSliderValueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *layerSizeSlider;
 @property (weak, nonatomic) IBOutlet UILabel *layerSizeSliderValueLabel;
+@property (weak, nonatomic) IBOutlet UISlider *instanceCountSlider;
+@property (weak, nonatomic) IBOutlet UILabel *instanceCountSliderValueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *instanceDelaySlider;
 @property (weak, nonatomic) IBOutlet UILabel *instanceDelaySliderValueLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *offsetRedSwitch;
@@ -72,8 +72,8 @@ typedef enum : NSUInteger {
   
   [self.replicatorLayer addSublayer:self.layer];
   
-  [self updateInstanceCountSliderValueLabel];
   [self updateLayerSizeSliderValueLabel];
+  [self updateInstanceCountSliderValueLabel];
   [self updateInstanceDelaySliderValueLabel];
 }
 
@@ -84,15 +84,15 @@ typedef enum : NSUInteger {
   [self.layer addAnimation:self.fadeAnimation forKey:FadeAnimation];
 }
 
-- (void)updateInstanceCountSliderValueLabel
-{
-  self.instanceCountSliderValueLabel.text = [NSString stringWithFormat:@"%.0f", self.instanceCountSlider.value];
-}
-
 - (void)updateLayerSizeSliderValueLabel
 {
   CGFloat value = self.layerSizeSlider.value;
   self.layerSizeSliderValueLabel.text = [NSString stringWithFormat:@"%.0f x %.0f", value, value * LengthMultiplier];
+}
+
+- (void)updateInstanceCountSliderValueLabel
+{
+  self.instanceCountSliderValueLabel.text = [NSString stringWithFormat:@"%.0f", self.instanceCountSlider.value];
 }
 
 - (void)updateInstanceDelaySliderValueLabel
