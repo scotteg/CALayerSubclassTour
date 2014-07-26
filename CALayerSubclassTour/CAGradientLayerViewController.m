@@ -8,16 +8,6 @@
 
 #import "CAGradientLayerViewController.h"
 
-typedef enum : NSUInteger {
-  ColorRed,
-  ColorOrange,
-  ColorYellow,
-  ColorGreen,
-  ColorBlue,
-  ColorIndigo,
-  ColorViolet,
-} Color;
-
 @interface CAGradientLayerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *viewForGradientLayer;
 @property (weak, nonatomic) IBOutlet UISlider *startPointSlider;

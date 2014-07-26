@@ -191,7 +191,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-Nz-kyv">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-Nz-kyv">
                                 <rect key="frame" x="99" y="449" width="81" height="31"/>
                                 <connections>
                                     <action selector="lineWidthSliderChanged:" destination="d6u-yC-xUm" eventType="valueChanged" id="MhV-j4-DoU"/>
@@ -1820,25 +1820,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SF-bN-yhy">
+                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SF-bN-yhy">
                                 <rect key="frame" x="106" y="487" width="51" height="31"/>
                                 <connections>
                                     <action selector="offsetSwitchChanged:" destination="LBd-Q4-VTC" eventType="valueChanged" id="u1x-rc-Fga"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-ms-QK8">
+                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-ms-QK8">
                                 <rect key="frame" x="106" y="525" width="51" height="31"/>
                                 <connections>
                                     <action selector="offsetSwitchChanged:" destination="LBd-Q4-VTC" eventType="valueChanged" id="maH-IQ-V2m"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-cn-FZ4">
+                            <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-cn-FZ4">
                                 <rect key="frame" x="260" y="487" width="51" height="31"/>
                                 <connections>
                                     <action selector="offsetSwitchChanged:" destination="LBd-Q4-VTC" eventType="valueChanged" id="hix-TI-7tv"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S1e-RS-14l">
+                            <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S1e-RS-14l">
                                 <rect key="frame" x="260" y="526" width="51" height="31"/>
                                 <connections>
                                     <action selector="offsetSwitchChanged:" destination="LBd-Q4-VTC" eventType="valueChanged" id="N0f-qy-5KH"/>

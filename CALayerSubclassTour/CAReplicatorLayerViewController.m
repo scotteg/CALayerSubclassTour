@@ -12,7 +12,7 @@ static CGFloat const LengthMultiplier = 3.0f;
 static NSString * const FadeAnimation = @"FadeAnimation";
 
 typedef enum : NSUInteger {
-  OffsetRed,
+  OffsetRed = 1,
   OffsetGreen,
   OffsetBlue,
   OffsetAlpha
@@ -100,18 +100,18 @@ typedef enum : NSUInteger {
   self.instanceDelaySliderValueLabel.text = [NSString stringWithFormat:@"%.0f", self.instanceDelaySlider.value];
 }
 
-- (IBAction)instanceCountSliderChanged:(UISlider *)sender
-{
-  self.replicatorLayer.instanceCount = sender.value;
-  self.replicatorLayer.instanceAlphaOffset = [self offsetValueForSwitch:self.offsetAlphaSwitch];
-  [self updateInstanceCountSliderValueLabel];
-}
-
 - (IBAction)layerSizeSliderChanged:(UISlider *)sender
 {
   CGFloat value = sender.value;
   self.layer.bounds = (CGRect){CGPointZero, value, value * LengthMultiplier};
   [self updateLayerSizeSliderValueLabel];
+}
+
+- (IBAction)instanceCountSliderChanged:(UISlider *)sender
+{
+  self.replicatorLayer.instanceCount = sender.value;
+  self.replicatorLayer.instanceAlphaOffset = [self offsetValueForSwitch:self.offsetAlphaSwitch];
+  [self updateInstanceCountSliderValueLabel];
 }
 
 - (IBAction)instanceDelaySliderChanged:(UISlider *)sender

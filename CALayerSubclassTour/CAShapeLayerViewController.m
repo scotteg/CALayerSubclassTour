@@ -75,10 +75,10 @@ typedef enum : NSUInteger {
   self.shapeLayer.lineDashPattern = nil;
   self.shapeLayer.lineDashPhase = Zero;
   self.shapeLayer.lineJoin = kCALineJoinMiter;
-  self.shapeLayer.lineWidth = One;
+  self.shapeLayer.lineWidth = self.lineWidthSlider.value;
   self.shapeLayer.miterLimit = 4.0f;
   self.shapeLayer.strokeColor = self.color.CGColor;
-
+  
   [self.viewForShapeLayer.layer addSublayer:self.shapeLayer];
 }
 

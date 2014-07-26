@@ -22,8 +22,8 @@
     @[@"CATextLayer", @"Render plain text or attributed strings"],
     @[@"CAGradientLayer", @"Apply a color gradient over the background"],
     @[@"CAReplicatorLayer", @"Duplicate a source layer"],
-    @[@"CATiledLayer", @"Asynchronously draw layer content in tiles"],
     @[@"CAShapeLayer", @"Draw using scalable vector paths"],
+    @[@"CATiledLayer", @"Asynchronously draw layer content in tiles"],
     @[@"CAEAGLLayer", @"Draw OpenGL content"],
     @[@"CATransformLayer", @"Draw 3D structures"],
     @[@"CAEmitterLayer", @"Render animated particles"]
