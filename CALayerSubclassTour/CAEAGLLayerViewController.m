@@ -11,8 +11,8 @@
 
 @interface CAEAGLLayerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *viewForEAGLLayer;
-@property (strong, nonatomic) CAEAGLLayer *eaglLayer;
 @property (strong, nonatomic) EAGLContext *context;
+@property (strong, nonatomic) CAEAGLLayer *eaglLayer;
 @property (assign, nonatomic) GLuint framebuffer;
 @property (assign, nonatomic) GLuint colorRenderBuffer;
 @property (assign, nonatomic) GLint framebufferWidth;

@@ -11,6 +11,7 @@
 #import "CATiledLayer+Adjustable.h"
 
 @interface CATiledLayerViewController () <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *zoomLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet TilingView *viewForTiledLayer;
 @property (weak, nonatomic) IBOutlet UISlider *fadeDurationSlider;
@@ -23,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *levelsOfDetailBiasSliderValueLabel;
 @property (weak, nonatomic) IBOutlet UISlider *zoomScaleSlider;
 @property (weak, nonatomic) IBOutlet UILabel *zoomScaleSliderValueLabel;
-@property (weak, nonatomic) IBOutlet UILabel *zoomLabel;
 @end
 
 @implementation CATiledLayerViewController
@@ -34,7 +34,7 @@
   
   srand(time(0));
   
-  [CATiledLayer setNewFadeDuration:0.25];
+//  [CATiledLayer setNewFadeDuration:0.25];
   self.fadeDurationSlider.value = [CATiledLayer newFadeDuration];
   [self updateFadeDurationSliderValueLabel];
   [self updateTileSizeSliderValueLabel];
@@ -67,7 +67,7 @@
 
 - (void)photoButtonTapped
 {
-  [self performSegueWithIdentifier:@"ShowPhotoTilingView" sender:nil];
+  [self performSegueWithIdentifier:@"PhotoTilingView" sender:nil];
 }
 
 - (void)updateFadeDurationSliderValueLabel

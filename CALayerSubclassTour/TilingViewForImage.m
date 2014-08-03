@@ -32,16 +32,15 @@ static CGFloat const SideLength = 640.0f;
 
 - (void)drawRect:(CGRect)rect
 {
-  CGFloat sideLength = 640.0f;
-  int firstColumn = (int)(CGRectGetMinX(rect) / sideLength);
-  int lastColumn = (int)(CGRectGetMaxX(rect) / sideLength);
-  int firstRow = (int)(CGRectGetMinY(rect) / sideLength);
-  int lastRow = (int)(CGRectGetMaxY(rect) / sideLength);
+  int firstColumn = (int)(CGRectGetMinX(rect) / SideLength);
+  int lastColumn = (int)(CGRectGetMaxX(rect) / SideLength);
+  int firstRow = (int)(CGRectGetMinY(rect) / SideLength);
+  int lastRow = (int)(CGRectGetMaxY(rect) / SideLength);
   
   for (int row = firstRow; row <= lastRow; row++) {
     for (int column = firstColumn; column <= lastColumn; column++) {
       UIImage *tile = [self imageForTileAtColumn:column row:row];
-      CGRect tileRect = (CGRect){{sideLength * column, sideLength * row}, sideLength, sideLength};
+      CGRect tileRect = (CGRect){{SideLength * column, SideLength * row}, SideLength, SideLength};
       tileRect = CGRectIntersection(self.bounds, tileRect);
       [tile drawInRect:tileRect];
     }

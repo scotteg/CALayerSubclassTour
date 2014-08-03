@@ -1699,7 +1699,7 @@
                         <outlet property="zoomLabel" destination="SQe-w4-x0P" id="i8p-3r-jeF"/>
                         <outlet property="zoomScaleSlider" destination="ggm-sa-AiO" id="JKw-SK-6Ni"/>
                         <outlet property="zoomScaleSliderValueLabel" destination="6s4-TI-lAs" id="fwj-a0-aFj"/>
-                        <segue destination="3oI-bJ-8zS" kind="modal" identifier="ShowPhotoTilingView" modalTransitionStyle="flipHorizontal" id="YyT-4S-rqL"/>
+                        <segue destination="3oI-bJ-8zS" kind="modal" identifier="PhotoTilingView" modalTransitionStyle="flipHorizontal" id="YyT-4S-rqL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHX-hF-JoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
