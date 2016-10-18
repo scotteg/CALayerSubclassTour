@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7hv-HL-MIT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7hv-HL-MIT">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Subclasses View Controller - CALayer Subclasses-->
+        <!--CALayer Subclasses-->
         <scene sceneID="YiT-am-dsF">
             <objects>
                 <tableViewController id="VeA-4L-uqI" customClass="SubclassesViewController" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Text Layer View Controller - CATextLayer-->
+        <!--CATextLayer-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CATextLayerViewController" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="424" y="-802"/>
         </scene>
-        <!--Shape Layer View Controller - CAShapeLayer-->
+        <!--CAShapeLayer-->
         <scene sceneID="Ea1-oV-PNg">
             <objects>
                 <viewController id="d6u-yC-xUm" customClass="CAShapeLayerViewController" sceneMemberID="viewController">
@@ -309,7 +309,7 @@
             </objects>
             <point key="canvasLocation" x="-424" y="0.0"/>
         </scene>
-        <!--Layer View Controller - CAEAGLLayer-->
+        <!--CAEAGLLayer-->
         <scene sceneID="HxO-hk-w9T">
             <objects>
                 <viewController id="sxf-DZ-NNc" customClass="CAEAGLLayerViewController" sceneMemberID="viewController">
@@ -337,7 +337,7 @@
             </objects>
             <point key="canvasLocation" x="1272" y="802"/>
         </scene>
-        <!--Scroll Layer View Controller - CAScrollLayer-->
+        <!--CAScrollLayer-->
         <scene sceneID="zOH-D7-meM">
             <objects>
                 <viewController id="LEu-4P-RjW" customClass="CAScrollLayerViewController" sceneMemberID="viewController">
@@ -396,7 +396,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="-802"/>
         </scene>
-        <!--Emitter Layer View Controller - CAEmitterLayer-->
+        <!--CAEmitterLayer-->
         <scene sceneID="on7-Oq-k9D">
             <objects>
                 <viewController id="anX-eH-sFo" customClass="CAEmitterLayerViewController" sceneMemberID="viewController">
@@ -1196,7 +1196,7 @@
             </objects>
             <point key="canvasLocation" x="424" y="802"/>
         </scene>
-        <!--Transform Layer View Controller - CATransformLayer-->
+        <!--CATransformLayer-->
         <scene sceneID="XIM-hd-Gqv">
             <objects>
                 <viewController id="HxT-QF-IKz" customClass="CATransformLayerViewController" sceneMemberID="viewController">
@@ -1315,7 +1315,7 @@
             </objects>
             <point key="canvasLocation" x="848" y="802"/>
         </scene>
-        <!--Gradient Layer View Controller - CAGradientLayer-->
+        <!--CAGradientLayer-->
         <scene sceneID="izN-sk-QXZ">
             <objects>
                 <viewController id="1Xq-gb-6KS" customClass="CAGradientLayerViewController" sceneMemberID="viewController">
@@ -1565,7 +1565,7 @@
             </objects>
             <point key="canvasLocation" x="848" y="-802"/>
         </scene>
-        <!--Tiled Layer View Controller - CATiledLayer-->
+        <!--CATiledLayer-->
         <scene sceneID="nGj-2M-P1B">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="U94-NG-5lQ" customClass="CATiledLayerViewController" sceneMemberID="viewController">
@@ -1746,7 +1746,7 @@
             </objects>
             <point key="canvasLocation" x="1696" y="0.0"/>
         </scene>
-        <!--Replicator Layer View Controller - CAReplicatorLayer-->
+        <!--CAReplicatorLayer-->
         <scene sceneID="VOh-b5-yHY">
             <objects>
                 <viewController id="LBd-Q4-VTC" customClass="CAReplicatorLayerViewController" sceneMemberID="viewController">
